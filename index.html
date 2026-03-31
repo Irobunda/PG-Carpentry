@@ -140,18 +140,21 @@
       background: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)),
         url('https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .hero-badge {
       position: absolute;
       bottom: 18px;
-      left: 18px;
-      right: 18px;
       background: rgba(255,255,255,0.95);
       border-radius: 18px;
       padding: 16px;
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
+      max-width: 80%; /* Ensures it doesn't touch the image edges */
+      text-align: center;
     }
 
     .hero-badge strong {
@@ -222,10 +225,28 @@
       .hero-grid { grid-template-columns: 1fr; display: flex;
         flex-direction: column; /* Puts image on top, text below */
         gap: 24px;      }
-      .hero-image { min-height: 300px; /* Reduced fixed height */ height: auto;
+      .hero-card {
+        border-radius: 0; /* Square edges look better for full-width mobile images */
+        border: none;
+        padding: 5;
+        width: 100vw; /* Forces image to be exactly the width of the phone */
+        margin-left: 0;
       }
-      .hero-badge { position: relative; /* Removes overlap by sitting inside the flow */
-        bottom: 0;left: 0; right: 0; margin-top: 10px; text-align: center; }
+      .hero-image { 
+        min-height: 350px; 
+        display: flex; /* Ensures flex is active on mobile */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .hero-badge {
+        position: relative; /* Removes overlap by sitting inside the flow */
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 400px 0 0 0 ;
+        text-align: center;
+      }
       .hero-text-content { text-align: center; }
       .hero-text-content h2 {font-size: 2rem; /* Smaller headline for mobile */  }
       .hero-actions { justify-content: center;  }
