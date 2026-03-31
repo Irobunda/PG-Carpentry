@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paul Graydon Carpentry | Local Carpenter Dublin | Custom Wardrobes & Kitchens</title>
+  <meta name="description" content="Professional carpenter in Dublin. Specializing in custom wardrobes, kitchen fitting, flooring, and wall panelling. Serving Dublin 8, South Dublin, and surrounding areas.">
+  <meta name="keywords" content="Carpenter Dublin, Custom Wardrobes South Dublin, Kitchen Fitting Dublin, Carpenter Dublin 8, Wall Panelling Ireland, Local Carpentry Services">
+  
+  <meta property="og:title" content="Paul Graydon Carpentry - Quality Work in Dublin">
+  <meta property="og:description" content="No job too small. Reliable local carpentry for your home.">
+  <meta property="og:type" content="website">  
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --foot: #1a0b0b3f;
+      --text: #1f1f1f;
+      --muted: #6e6258;
+      --primary: #7b4f2c;
+      --primary-dark: #5c3a1f;
+      --card: #ffffff;
+      --line: #ddd2c7;
+      --accent: #d6b58a;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 18px;
+      --max: 1150px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(247, 243, 238, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .brand-text h1 {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.1;
+    }
+
+    .brand-text p {
+      margin: 3px 0 0;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    .footer-links a:hover,
+    .service-links a:hover {
+      color: var(--primary);
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      padding: 72px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image {
+      border-radius: 20px;
+      min-height: 500px;
+      background: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)),
+        url('https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover;
+      position: relative;
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      right: 18px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 18px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-badge strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--primary-dark);
+    }
+
+    .hero-text-content h2 {
+      margin: 0 0 16px;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.1;
+    }
+
+    .hero-text-content h2 span {
+      color: var(--primary);
+    }
+
+    .hero-text-content p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 55ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary { background: var(--primary); color: #fff; border: 1px solid var(--primary); }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-secondary { background: #fff; color: var(--primary); border: 1px solid var(--line); }
+    .btn-secondary:hover { border-color: var(--primary); }
+
+    .hero-text-content .highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .highlight {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      font-size: 0.95rem;
+    }
+
+    .highlight strong { color: var(--primary); display: block; }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 920px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 32px;
+      }
+      .hero-image { min-height: 400px; }
+      .hero-text-content { text-align: center; }
+      .hero-actions { justify-content: center; }
+      .hero-text-content .highlights { grid-template-columns: 1fr; }
+    }
+
+    /* --- REST OF SECTIONS --- */
+    section { padding: 80px 0; }
+    .section-head { margin-bottom: 32px; max-width: 1700px; }
+    .section-head h3 { font-size: 2.2rem; margin: 0 0 10px; }
+
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .gallery-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .gallery-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .gallery-photo {
+      aspect-ratio: 4 / 3;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gallery-caption {
+      padding: 16px 18px;
+    }
+
+    .gallery-caption strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .service-card, .about-card, .contact-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    
+    .contact-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; }
+    input, textarea { width: 100%; padding: 12px; margin-top: 8px; border: 1px solid var(--line); border-radius: 12px; }
+ footer {
+  padding: 60px 0 40px; /* Increased top padding for that clean look */
+  border-top: 1px solid var(--line);
+  background: var(--foot); /* Matches the light background in the image */
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr; /* Matches the layout in the image */
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-brand .brand {
+  margin-bottom: 16px;
+}
+
+.footer-brand .logo {
+  width: 48px; /* Slightly smaller logo as seen in the image */
+  height: 48px;
+  border-radius: 12px;
+}
+
+.footer-brand .brand-text h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer-brand .brand-text p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.footer-brand .note {
+  font-size: 0.95rem;
+  max-width: 320px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 20px;
+}
+
+.footer-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.footer-links, .service-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Clean spacing between list items */
+}
+
+.footer-links a, .service-links a {
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.copyright {
+  margin-top: 60px; /* Large gap before copyright as seen in the design */
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+    .mobile-toggle {
+      display: none;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      nav { display: none; width: 100%; }
+      nav.open { display: block; }
+      nav ul { flex-direction: column; align-items: flex-start; padding: 20px 0; }
+      .services-grid, .about-grid, .gallery-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <div class="logo">
+          <svg width="34" height="34" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 44L43 14L50 21L20 51H13V44Z" fill="#7b4f2c"/>
+            <path d="M39 10L54 25" stroke="#1f1f1f" stroke-width="4" stroke-linecap="round"/>
+            <path d="M9 56H55" stroke="#1f1f1f" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>Paul Graydon Carpentry</h1>
+          <p>No job too small — quality in every detail.</p>
+        </div>
+      </a>
+      <button class="mobile-toggle" id="menuBtn">Menu</button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="hero-image">
+            <div class="hero-badge">
+              <strong>Craftsmanship you can trust</strong>
+              Dublin-based, reliable, and neat.
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-text-content">
+          <h2>Built with care by <span>Paul Graydon</span></h2>
+          <p>
+            From fitted kitchens and wardrobes to flooring, panelling, and everyday carpentry repairs,
+            Paul delivers neat, dependable workmanship with a clean finish.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+            <a href="#gallery" class="btn btn-secondary">View Gallery</a>
+          </div>
+
+          <div class="highlights">
+            <div class="highlight"><strong>Kitchens & Wardrobes</strong>Designed and fitted with precision.</div>
+            <div class="highlight"><strong>Flooring & Panelling</strong>Clean lines, strong finishes, and lasting results.</div>
+            <div class="highlight"><strong>General Carpentry</strong>Shelving, repairs, trim work, doors, and more.</div>
+            <div class="highlight"><strong>Dublin Based</strong>Serving Dublin & neighbouring counties.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h3>Services</h3>
+          <p>
+            Whether it is a full installation or a simple repair, every project gets the same attention to detail.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <h4>Kitchen Carpentry</h4>
+            <p>Kitchen fitting, cabinet adjustments, worktop support, trims, shelving, and finishing touches.</p>
+          </article>
+
+          <article class="service-card">
+            <h4>Flooring</h4>
+            <p>Laminate, engineered wood, skirting, threshold finishing, and neat floor detail work.</p>
+          </article>
+
+          <article class="service-card">
+            <h4>Wardrobes</h4>
+            <p>Custom wardrobe fitting, internal shelving, doors, rails, storage upgrades, and tidy installs.</p>
+          </article>
+
+          <article class="service-card">
+            <h4>Wall Panelling</h4>
+            <p>Decorative wall panelling, feature walls, bespoke wood details, and modern interior finishes.</p>
+          </article>
+
+          <article class="service-card">
+            <h4>Regular Carpentry Work</h4>
+            <p>Doors, shelving, repairs, boxing-in, small jobs, timber touch-ups, and practical woodwork solutions.</p>
+          </article>
+
+          <article class="service-card">
+            <h4>Made-to-Measure Projects</h4>
+            <p>Built for your space, style, and budget, with honest advice and dependable workmanship throughout.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h3>Why choose Paul Graydon?</h3>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h4>Personal service</h4>
+            <p>You deal directly with Paul from first contact to final finish, with honest advice and dependable workmanship.</p>
+          </div>
+
+          <div class="about-card">
+            <h4>Clean, tidy results</h4>
+            <p>Every project is completed with care for your home, clean finishes, and attention to detail.</p>
+          </div>
+
+          <div class="about-card">
+            <h4>Small jobs welcome</h4>
+            <p>Not every job has to be big. From small repairs to fitted projects, every piece of work matters.</p>
+          </div>
+
+          <div class="about-card">
+            <h4>Flexible for homes and interiors</h4>
+            <p>Ideal for kitchens, bedrooms, living spaces, hallways, storage upgrades, and everyday carpentry needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+
+
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <div class="gallery-photo" style="background-image:url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="gallery-caption">
+              <strong>Kitchen fitting</strong>
+              Modern kitchen carpentry and finishing details.
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-photo" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="gallery-caption">
+              <strong>Wardrobe installation</strong>
+              Fitted storage work designed around the room.
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-photo" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="gallery-caption">
+              <strong>Interior wood finish</strong>
+              Bespoke carpentry with a clean final look.
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-photo" style="background-image:url('https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="gallery-caption">
+              <strong>Wall panelling</strong>
+              Decorative wall detail for modern interiors.
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-photo" style="background-image:url('https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="gallery-caption">
+              <strong>Flooring project</strong>
+              Strong layout, clean joins, and tidy finishing.
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-photo" style="background-image:url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="gallery-caption">
+              <strong>General carpentry</strong>
+              Small jobs and finishing details done properly.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+        <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h3>Contact Paul</h3>
+          <p>Use the form below to request a quote or ask about a job. You can also call directly.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h4>Send a message</h4>
+            <form action="https://formsubmit.co/UNIQUE_TOKEN_HERE" method="POST">
+              <input type="text" name="_honey" style="display:none">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="New Website Enquiry - Paul Graydon Carpentry">
+
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
+
+              <div>
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+              </div>
+
+              <div>
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="text" placeholder="Your phone number">
+              </div>
+
+              <div>
+                <label for="message">What do you need help with?</label>
+                <textarea id="message" name="message" placeholder="e.g., Fitted wardrobe in Dublin 8, kitchen repair..." required></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Send Enquiry</button>
+            </form>
+          </div>
+
+          <div class="contact-card">
+            <h4>Direct contact</h4>
+            <p>Serving Dublin and surrounding areas.</p>
+            <ul class="contact-list">
+              <li><strong>Phone:</strong> <a href="tel:+353000000000">+353 00 000 0000</a></li>
+              <li><strong>Email:</strong> <span id="email-placeholder">Click to reveal</span></li>
+            </ul>
+          </div>
+        </div> </div> </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand" style="margin-bottom: 12px;">
+            <div class="logo" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 44L43 14L50 21L20 51H13V44Z" fill="#7b4f2c"/>
+                <path d="M39 10L54 25" stroke="#1f1f1f" stroke-width="4" stroke-linecap="round"/>
+                <path d="M9 56H55" stroke="#1f1f1f" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <h1 style="font-size: 1.1rem; margin: 0;">Paul Graydon Carpentry</h1>
+              <p style="font-size: 0.86rem; margin: 3px 0 0;">No job too small — quality in every detail.</p>
+            </div>
+          </div>
+          <p class="note" style="max-width: 300px;">Practical carpentry for kitchens, floors, wardrobes, panelling, and everyday woodwork.</p>
+        </div>
+
+        <div class="footer-column">
+          <h5 class="footer-title">Quick links</h5>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5 class="footer-title">Services</h5>
+          <div class="service-links">
+            <a href="#services">Kitchen Carpentry</a>
+            <a href="#services">Flooring</a>
+            <a href="#services">Wardrobes</a>
+            <a href="#services">Wall Panelling</a>
+            <a href="#services">Regular Carpentry</a>
+          </div>
+        </div>
+      </div>
+      
+      <div style="border-top: 1px solid var(--line); margin-top: 40px; padding-top: 20px;">
+        <p class="copyright">© <span id="year"></span> Paul Graydon Carpentry. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // --- Navigation Logic ---
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+      });
+    }
+
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => mainNav.classList.remove('open'));
+    });
+
+    // --- Footer Year ---
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // --- Email Reveal Logic ---
+    const emailPlaceholder = document.getElementById('email-placeholder');
+    if (emailPlaceholder) {
+      emailPlaceholder.style.cursor = 'pointer';
+      emailPlaceholder.style.color = 'var(--primary)';
+      emailPlaceholder.style.fontWeight = '700';
+      emailPlaceholder.addEventListener('click', () => {
+        const user = "paul.graydon00";
+        const domain = "gmail.com";
+        emailPlaceholder.innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+      });
+    }
+  </script>
+</body>
+</html>
