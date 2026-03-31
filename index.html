@@ -218,16 +218,20 @@
 
     /* --- RESPONSIVE --- */
     @media (max-width: 920px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 32px;
+      .hero {padding: 40px 0; /* Reduced padding for mobile */      }
+      .hero-grid { grid-template-columns: 1fr; display: flex;
+        flex-direction: column; /* Puts image on top, text below */
+        gap: 24px;      }
+      .hero-image { min-height: 300px; /* Reduced fixed height */ height: auto;
       }
-      .hero-image { min-height: 400px; }
+      .hero-badge { position: relative; /* Removes overlap by sitting inside the flow */
+        bottom: 0;left: 0; right: 0; margin-top: 10px; text-align: center; }
       .hero-text-content { text-align: center; }
-      .hero-actions { justify-content: center; }
-      .hero-text-content .highlights { grid-template-columns: 1fr; }
+      .hero-text-content h2 {font-size: 2rem; /* Smaller headline for mobile */  }
+      .hero-actions { justify-content: center;  }
+      .hero-text-content .highlights { grid-template-columns: 1fr; /* Stacks cards in one column */
+        gap: 10px; }
+      .highlight {  text-align: center;}
     }
 
     /* --- REST OF SECTIONS --- */
